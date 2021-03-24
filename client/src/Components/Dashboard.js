@@ -1142,7 +1142,8 @@ export default function Dashboard() {
       console.log(disease);
       trackPromise(
         fetch(
-          `http://ec2-3-236-139-12.compute-1.amazonaws.com:8080/api/disease_test3/${disease}`
+          // `http://ec2-3-236-139-12.compute-1.amazonaws.com:8080/api/disease_test3/${disease}`
+          `http://localhost:8080/api/disease_test3/${disease}`
         )
           .then((response) => {
             return response.text();
@@ -1164,7 +1165,8 @@ export default function Dashboard() {
       // console.log(snp)
       trackPromise(
         fetch(
-          `http://ec2-3-236-139-12.compute-1.amazonaws.com:8080/api/snp2promoter/${snp}_${cell}`
+          // `http://ec2-3-236-139-12.compute-1.amazonaws.com:8080/api/snp2promoter/${snp}_${cell}`
+          `http://localhost:8080/api/snp2promoter/${snp}_${cell}`
         )
           .then((response) => {
             return response.text();
@@ -1184,7 +1186,8 @@ export default function Dashboard() {
     } else if (search === "gene") {
       trackPromise(
         fetch(
-          `http://ec2-3-236-139-12.compute-1.amazonaws.com:8080/api/gene/${gene}_${cell}`
+          // `http://ec2-3-236-139-12.compute-1.amazonaws.com:8080/api/gene/${gene}_${cell}`
+          `http://localhost:8080/api/gene/${gene}_${cell}`
         )
           .then((response) => {
             return response.text();
